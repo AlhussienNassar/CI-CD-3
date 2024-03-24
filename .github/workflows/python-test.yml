@@ -4,14 +4,14 @@ on:
   push:
     branches:
       - main
-
+env:
+      PYTHON_VERSION: '3.x'
+      REQUIREMENTS_FILE: 'requirements.txt'
 jobs:
   test-and-package:
     runs-on: ubuntu-latest
     
-    env:
-      PYTHON_VERSION: '3.x'
-      REQUIREMENTS_FILE: 'requirements.txt'
+
 
     steps:
     - name: Checkout code
